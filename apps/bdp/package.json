@@ -29,8 +29,9 @@
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^9.2.0",
     "typescript": "5.0.2",
-    "shared-components":"*",
-    "ui":"*"
+    "ui": "*",
+    "shared-components": "*"
+
 
   },
   "devDependencies": {

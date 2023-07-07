@@ -1,4 +1,4 @@
-// import SiteLayout from "@/components/Layout/SiteLayout";
+import SiteLayout from "@/components/Layout/SiteLayout";
 import AboutSection from "@/components/digitalPayments/AboutSection";
 import CustomDigitalSection from "@/components/digitalPayments/CustomDigitalSection";
 import DiscoverBusinessSection from "@/components/digitalPayments/DiscoverBusinessSection";
@@ -8,7 +8,6 @@ import NumberSection from "@/components/digitalPayments/NumberSection";
 import OurExpetiseSection from "@/components/digitalPayments/OurExpetiseSection";
 import WorkPOSSection from "@/components/digitalPayments/WorkPOSSection";
 import React from "react";
-import { SiteLayout } from "shared-components";
 
 const Bdp = () => {
   return (
@@ -17,6 +16,7 @@ const Bdp = () => {
         <HeroSection />
         <AboutSection />
         <DiscoverBusinessSection />
+        {/* <CustomDigitalSection /> */}
         <WorkPOSSection />
         <OurExpetiseSection />
         <MissionVissionSection />

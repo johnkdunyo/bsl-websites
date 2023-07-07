@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headerText1 {
+    @apply font-bold text-[2.8rem] sm:text-7xl leading-[3.6rem] sm:leading-[6rem]
+}
+
+.headerText2 {
+    @apply font-bold text-[2.6rem] sm:text-6xl leading-[3.4rem] sm:leading-[5rem]
+}
+
+.headerText3 {
+    @apply font-bold text-[1.8rem] sm:text-[2.5rem] leading-[3.4rem]
+}
+
+.paragraphText1 {
+    @apply text-base font-normal sm:text-lg tracking-wider leading-7
+}
