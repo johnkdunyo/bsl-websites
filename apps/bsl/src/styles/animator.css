@@ -1,0 +1,182 @@
+@keyframes move-circle-1 {
+    0% {
+        top: 0;
+        left: 50%;
+    }
+
+    25% {
+        top: 50%;
+        left: 100%;
+    }
+
+    50% {
+        top: 100%;
+        left: 50%;
+    }
+
+    75% {
+        top: 50%;
+        left: 0%;
+    }
+
+    100% {
+        top: 0%;
+        left: 50%;
+    }
+}
+
+@keyframes move-circle-2 {
+    0% {
+        top: 0%;
+        left: 50%;
+    }
+
+    /* left */
+    25% {
+        top: 50%;
+        left: 50%;
+    }
+
+    /* button */
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+
+    75% {
+        top: 50%;
+        left: 0%;
+    }
+
+    100% {
+        top: 0%;
+        left: 50%;
+    }
+}
+
+@keyframes move-circle-3 {
+    /* button */
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+
+    25% {
+        top: 50%;
+        left: 0%;
+    }
+
+    50% {
+        top: 0%;
+        left: 50%;
+    }
+/* left */
+    75% {
+        top: 50%;
+        left: 50%;
+    }
+
+    /* button */
+    100% {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+
+
+
+
+@keyframes move-circle {
+0% {
+        left: 0;
+    }
+
+    50% {
+        left: calc(100% - 100px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes move-up-down {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: calc(100% - 100px);
+    }
+
+    100% {
+        top: 0;
+    }
+}
+.circle {
+    position: absolute;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* .circle-1 {
+    animation-name: move-circle-1;
+    background-image: url('/assets/img/backgrounds/icons/ball3.png');
+    background-position: center;
+    background-size: cover;
+} */
+
+.circle-2 {
+    animation-name: move-circle-2;
+    background-image: url('/assets/img/backgrounds/icons/ball4.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+.circle-3 {
+    animation-name: move-circle-3;
+    background-image: url('/assets/img/backgrounds/icons/ball5.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+.animate-move-linear {
+    display: block;
+
+    /* @apply overflow-clip; */
+
+
+    /* width: 100%; */
+    transform: translateX(100%);
+    /* Animation start out of the screen */
+
+    /* Add the animation */
+    animation: move 30s linear infinite
+        /* infinite make reapeat the animation indefinitely */
+    ;
+}
+
+/* Create the animation */
+@keyframes move {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+.bar_content {
+    display: block;
+    transform: translateX(100%);
+    animation: move 30s linear infinite;
+    white-space: nowrap;
+}
+    
+    @keyframes move {
+        to {
+            transform: translateX(-100%);
+            }
+    }

@@ -28,7 +28,9 @@
     "react-use-measure": "^2.1.1",
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^9.2.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "ui": "*"
+
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
