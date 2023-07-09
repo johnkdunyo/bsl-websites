@@ -1905,7 +1905,7 @@ dot-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-dotenv-cli@^7.2.1, dotenv-cli@latest:
+dotenv-cli@latest:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/dotenv-cli/-/dotenv-cli-7.2.1.tgz#e595afd9ebfb721df9da809a435b9aa966c92062"
   integrity sha512-ODHbGTskqRtXAzZapDPvgNuDVQApu4oKX8lZW7Y0+9hKA6le1ZJlyRS687oU9FXjOVEDU/VFV6zI125HzhM1UQ==
