@@ -1,4 +1,6 @@
-const siteMetaData = {
+import { siteMetaData } from "./index.d";
+
+const siteMetaData: siteMetaData = {
   "bsl-instagram":
     "https://instagram.com/broad.spectrumgroup?igshid=MzRlODBiNWFlZA==",
   "bsl-twitter":

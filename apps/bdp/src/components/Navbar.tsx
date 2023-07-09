@@ -80,7 +80,7 @@ const NavButton = ({ active, title, href, imgSRC }: INavbarNavButtons) => {
     <button
       className={` ${
         active ? "bg-transparent" : "bg-transparent"
-      }  px-6 w-full   h-10 relative border`}
+      }  px-6 w-full   h-10 relative `}
     >
       <Link href={href}>
         <Image src={imgSRC} alt={title} className="  " fill />
