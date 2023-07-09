@@ -1,7 +1,4 @@
-import * as React from "react";
-
-
-export const siteMetaData = {
+const siteMetaData = {
     "bsl-instagram": "https://instagram.com/broad.spectrumgroup?igshid=MzRlODBiNWFlZA==",
     "bsl-twitter": "https://twitter.com/bsl_gh/status/1589549139695583232?s=46&t=4x-q-gdhvcAo2tcCkmwebA",
     "bsl-linkedin" : "https://www.linkedin.com/company/broadspectrum-digital-payments/mycompany/?viewAsMember=true",
@@ -18,3 +15,4 @@ export const siteMetaData = {
 
 }
 
+export default siteMetaData
