@@ -1,8 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo dev",
+    "start": "dotenv -- turbo start",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo clean"
@@ -12,12 +13,16 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "prettier": "^2.5.1",
-    "turbo": "latest"
+    "turbo": "latest",
+     "dotenv-cli": "latest"
   },
   "name": "allwebsites",
   "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }

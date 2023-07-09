@@ -21,38 +21,35 @@ interface ISubsidiaryNavs extends INavs {
   imgSRC2: string;
 }
 
-const WebsiteNavs: INavs[] = [
-  { id: 1, title: "Business", href: "/" },
-  { id: 2, title: "About", href: "/" },
-  { id: 3, title: "Career", href: "/" },
-];
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+console.log("baseURL", baseUrl);
 
 const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 1,
     title: "BSL Home",
-    href: "/",
+    href: `${baseUrl}:3000`,
     imgSRC: "/assets/icons/bsl-main.svg",
     imgSRC2: "/assets/icons/bsl-main.svg",
   },
   {
     id: 2,
     title: "Spectrum Fibre",
-    href: "/spectrumfibre",
+    href: `${baseUrl}:3003`,
     imgSRC: "/assets/icons/spectrum-main.svg",
     imgSRC2: "/assets/icons/spectrum.svg",
   },
   {
     id: 3,
     title: "Infra Services",
-    href: "/isg",
+    href: `${baseUrl}:3002`,
     imgSRC: "/assets/icons/isg-main.svg",
     imgSRC2: "/assets/icons/isg.svg",
   },
   {
     id: 4,
     title: "Digital Payment",
-    href: "/bdp",
+    href: `${baseUrl}:3001`,
     imgSRC: "/assets/icons/bdp-main.svg",
     imgSRC2: "/assets/icons/bdp.svg",
   },
@@ -83,7 +80,7 @@ const NavButton = ({ active, title, href, imgSRC }: INavbarNavButtons) => {
     <button
       className={` ${
         active ? "bg-transparent" : "bg-transparent"
-      }  px-6 w-full   h-10 relative`}
+      }  px-6 w-full   h-10 relative border`}
     >
       <Link href={href}>
         <Image src={imgSRC} alt={title} className="  " fill />
@@ -219,7 +216,7 @@ const Navbar = ({ pageName }: INavbar) => {
   const [currentNav, setCurrentNav] = useState<ISubsidiaryNavs>({
     id: 1,
     title: "BSL Home",
-    href: "/",
+    href: `${baseUrl}:3000`,
     imgSRC: "/assets/icons/bsl-main.svg",
     imgSRC2: "/assets/icons/bsl-main.svg",
   });
@@ -246,7 +243,7 @@ const Navbar = ({ pageName }: INavbar) => {
       setCurrentNav({
         id: 4,
         title: "Digital Payment",
-        href: "/bdp",
+        href: `${baseUrl}:3001`,
         imgSRC: "/assets/icons/bdp-main.svg",
         imgSRC2: "/assets/icons/bdp.svg",
       });
@@ -259,7 +256,7 @@ const Navbar = ({ pageName }: INavbar) => {
       setCurrentNav({
         id: 3,
         title: "Infra Services",
-        href: "/isg",
+        href: `${baseUrl}:3002`,
         imgSRC: "/assets/icons/isg-main.svg",
         imgSRC2: "/assets/icons/isg.svg",
       });
@@ -272,7 +269,7 @@ const Navbar = ({ pageName }: INavbar) => {
       setCurrentNav({
         id: 2,
         title: "Spectrum Fibre",
-        href: "/spectrumfibre",
+        href: `${baseUrl}:3003`,
         imgSRC: "/assets/icons/spectrum-main.svg",
         imgSRC2: "/assets/icons/spectrum.svg",
       });

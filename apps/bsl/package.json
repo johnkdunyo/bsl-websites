@@ -14,6 +14,7 @@
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
     "daisyui": "^2.51.5",
+    "dotenv-cli": "^7.2.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.12.4",
@@ -27,12 +28,10 @@
     "react-scroll-to-top": "^3.0.0",
     "react-use-measure": "^2.1.1",
     "react-visibility-sensor": "^5.1.1",
+    "shared-components": "*",
     "swiper": "^9.2.0",
     "typescript": "5.0.2",
-    "ui": "*",
-    "shared-components": "*"
-
-
+    "ui": "*"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",

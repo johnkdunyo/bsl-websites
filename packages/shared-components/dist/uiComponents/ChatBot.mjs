@@ -1,9 +1,8 @@
-import { b } from '../chunk-JY2CNIQU.mjs';
-import '../chunk-NCPQ7UD6.mjs';
-import { i } from '../chunk-W27PVTBX.mjs';
+import '../chunk-5SUNLSPD.mjs';
+import s from 'next/image';
 import { useState, useEffect } from 'react';
 import { jsx } from 'react/jsx-runtime';
 
-var e=i(b());var r=()=>{let[s,o]=useState(!1);useEffect(()=>{window.addEventListener("scroll",()=>{window.scrollY>1800?o(!0):o(!1);});},[]);return jsx("div",{className:"relative",children:s&&jsx("button",{children:jsx(e.default,{alt:"chat u",src:"/assets/icons/whatsapp.png",height:50,width:150,className:"fixed bottom-0 right-0 chatIcon-style z-20",loading:"lazy"})})})},d=r;
+var i=()=>{let[e,o]=useState(!1);useEffect(()=>{window.addEventListener("scroll",()=>{window.scrollY>1800?o(!0):o(!1);});},[]);return jsx("div",{className:"relative",children:e&&jsx("button",{children:jsx(s,{alt:"chat u",src:"/assets/icons/whatsapp.png",height:50,width:150,className:"fixed bottom-0 right-0 chatIcon-style z-20",loading:"lazy"})})})},p=i;
 
-export { d as default };
+export { p as default };

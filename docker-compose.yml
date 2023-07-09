@@ -1,0 +1,65 @@
+version: "3"
+
+services:
+  bsl:
+    container_name: bsl
+    build:
+      context: .
+      dockerfile: ./apps/bsl/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
+    networks:
+      - apps_network
+
+  bdp:
+    container_name: bdp
+    build:
+      context: .
+      dockerfile: ./apps/bdp/Dockerfile
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+      - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
+    networks:
+      - apps_network
+
+  isg:
+    container_name: isg
+    build:
+      context: .
+      dockerfile: ./apps/isg/Dockerfile
+    restart: always
+    ports:
+      - 3002:3002
+    environment:
+      - PORT=3002
+      - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
+    networks:
+      - apps_network
+
+  spectrumfibre:
+    container_name: spectrumfibre
+    build:
+      context: .
+      dockerfile: ./apps/spectrumfibre/Dockerfile
+    restart: always
+    ports:
+      - 3003:3003
+    environment:
+      - PORT=3003
+      - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
+    networks:
+      - apps_network
+ 
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  apps_network:
+    external: true
