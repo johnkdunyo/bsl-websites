@@ -1,4 +1,3 @@
 import siteMetaData from "./siteMetaData";
 
-
-export {siteMetaData}
+export { siteMetaData };

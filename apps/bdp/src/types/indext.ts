@@ -1,5 +1,5 @@
 export interface IPageName {
-    pageName:
+  pageName:
     | "BSL Home"
     | "Spectrum Fibre"
     | "Infra Services"
