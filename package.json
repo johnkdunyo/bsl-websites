@@ -29,8 +29,7 @@
     "react-use-measure": "^2.1.1",
     "react-visibility-sensor": "^5.1.1",
     "react-icons": "^4.8.0",
-    "swiper": "^9.2.0",
-    "typescript": "5.0.2"
+    "swiper": "^9.2.0"
   },
   "devDependencies": {
     "@types/node": "18.15.10",
@@ -47,6 +46,8 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.2",
-    "eslint-config-custom": "*"
+    "typescript": "5.0.2",
+    "eslint-config-custom": "*",
+    "tsconfig": "*"
   }
 }
