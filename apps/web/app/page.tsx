@@ -1,4 +1,4 @@
-import { Button, Header } from "ui";
+import { Button, Header } from "shared-components";
 
 export default function Page() {
   return (
