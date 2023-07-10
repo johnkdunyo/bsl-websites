@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+body {
+    overflow-y: visible;
+    position: relative;
+    height: unset;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+
+.navbar-bg {
+    @apply bg-white bg-opacity-50 dark:text-gray-100 backdrop-filter backdrop-blur-lg dark:bg-opacity-50
+}
+
+.custom-button1 {
+    @apply px-6 py-3 uppercase custom-gradient-bg text-white rounded-[24px] tracking-widest hover:bg-gradient-to-r hover:from-white hover:to-white hover:text-[#1D365A]
+}
+
+.custom-container {
+    @apply container mx-auto px-4 sm:px-16
+}
+
+.custom-container2 {
+    @apply container mx-auto px-6 sm:px-36
+}
+
+.home-custom-navs {
+    /* background: #F0F0F0 0% 0% no-repeat padding-box; */
+    /* border-radius: 48px;
+    opacity: 1;*/
+    @apply rounded-[48px] bg-gray-700/20 bg-opacity-50 backdrop-filter backdrop-blur-xl;
+}
+
+
+.custom-gradient-bg {
+    @apply bg-gradient-to-r from-[#1D365A] to-[#AB2346]
+}
+
+
+
+
+.custom-bg-blend1 {
+    /* @apply bg-blend-darken custom-gradient-bg opacity-20 z-10  ; */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+}
+
+
+
+
+
+/*---------------------------------------------------*/
+/*	18) DEVMAN MAGIC CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    visibility: hidden;
+}
+
+.cursor-inner {
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    z-index: 100;
+    background-color: var(--main-color);
+    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+        margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+        margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cursor-inner.cursor-hover {
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-color);
+    opacity: 0.3;
+}
+
+.cursor-outer {
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--main-color);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
+    opacity: 0.5;
+    -webkit-transition: all 0.08s ease-out;
+    transition: all 0.08s ease-out;
+}
+
+.cursor-outer.cursor-hover {
+    opacity: 0;
+}
+
+.site_all_wrap[data-magic-cursor="hide"] .mouse-cursor {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1111;
+}
+
+.site_all_wrap {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+}
+
+.site_all_wrap,
+.site_all_wrap * {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
