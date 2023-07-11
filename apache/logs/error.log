@@ -1,0 +1,27 @@
+[Tue Jul 11 18:24:09.350836 2023] [mpm_event:notice] [pid 1:tid 281472852099104] AH00489: Apache/2.4.57 (Unix) configured -- resuming normal operations
+[Tue Jul 11 18:24:09.351517 2023] [core:notice] [pid 1:tid 281472852099104] AH00094: Command line: 'httpd -D FOREGROUND'
+[Tue Jul 11 18:25:37.559501 2023] [core:crit] [pid 7:tid 281472762114336] [client 172.25.0.1:38720] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:25:37.638288 2023] [core:crit] [pid 9:tid 281472838246688] [client 172.25.0.1:38724] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://localhost:8008/
+[Tue Jul 11 18:26:02.796392 2023] [core:crit] [pid 8:tid 281472838246688] [client 172.25.0.1:48000] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:26:02.870085 2023] [core:crit] [pid 8:tid 281472745206048] [client 172.25.0.1:48008] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/
+[Tue Jul 11 18:27:25.997388 2023] [core:crit] [pid 9:tid 281472753660192] [client 172.25.0.1:52882] AH00025: configuration error:  couldn't check user: /bsl
+[Tue Jul 11 18:27:26.069434 2023] [core:crit] [pid 9:tid 281472736751904] [client 172.25.0.1:52896] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/bsl
+[Tue Jul 11 18:27:34.388958 2023] [core:crit] [pid 7:tid 281472838246688] [client 172.25.0.1:39544] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:27:34.426229 2023] [core:crit] [pid 9:tid 281472719843616] [client 172.25.0.1:39556] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/
+[Tue Jul 11 18:29:08.057629 2023] [core:crit] [pid 7:tid 281472736751904] [client 172.25.0.1:60278] AH00025: configuration error:  couldn't check user: /bsl
+[Tue Jul 11 18:29:08.123009 2023] [core:crit] [pid 9:tid 281472225243424] [client 172.25.0.1:60276] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/bsl
+[Tue Jul 11 18:29:11.261351 2023] [core:crit] [pid 8:tid 281472753660192] [client 172.25.0.1:60292] AH00025: configuration error:  couldn't check user: /bsl/
+[Tue Jul 11 18:29:11.300573 2023] [core:crit] [pid 8:tid 281472711389472] [client 172.25.0.1:60296] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/bsl/
+[Tue Jul 11 18:29:13.866311 2023] [core:crit] [pid 9:tid 281472208335136] [client 172.25.0.1:60316] AH00025: configuration error:  couldn't check user: /bsl
+[Tue Jul 11 18:29:13.893570 2023] [core:crit] [pid 7:tid 281472719843616] [client 172.25.0.1:60312] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/bsl
+[Tue Jul 11 18:30:53.298272 2023] [mpm_event:notice] [pid 1:tid 281472852099104] AH00492: caught SIGWINCH, shutting down gracefully
+[Tue Jul 11 18:31:48.171812 2023] [mpm_event:notice] [pid 1:tid 281473089589280] AH00489: Apache/2.4.57 (Unix) configured -- resuming normal operations
+[Tue Jul 11 18:31:48.174471 2023] [core:notice] [pid 1:tid 281473089589280] AH00094: Command line: 'httpd -D FOREGROUND'
+[Tue Jul 11 18:32:22.031352 2023] [core:crit] [pid 8:tid 281473058840864] [client 172.26.0.1:41030] AH00025: configuration error:  couldn't check user: /bsl
+[Tue Jul 11 18:32:22.151354 2023] [core:crit] [pid 8:tid 281473075749152] [client 172.26.0.1:41032] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/bsl
+[Tue Jul 11 18:32:25.814843 2023] [core:crit] [pid 9:tid 281473075749152] [client 172.26.0.1:59632] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:32:25.888539 2023] [core:crit] [pid 9:tid 281473041932576] [client 172.26.0.1:59640] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://127.0.0.1:8008/
+[Tue Jul 11 18:32:44.662518 2023] [core:crit] [pid 8:tid 281473067295008] [client 172.26.0.1:34808] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:32:44.757712 2023] [core:crit] [pid 8:tid 281472954986784] [client 172.26.0.1:34806] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://0.0.0.0:8008/
+[Tue Jul 11 18:32:47.552417 2023] [core:crit] [pid 8:tid 281472938078496] [client 172.26.0.1:34834] AH00025: configuration error:  couldn't check user: /
+[Tue Jul 11 18:32:47.585310 2023] [core:crit] [pid 9:tid 281472963440928] [client 172.26.0.1:34832] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://0.0.0.0:8008/
