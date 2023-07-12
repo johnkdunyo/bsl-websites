@@ -57,6 +57,6 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/spectrumfibre/.next/standa
 COPY --from=installer --chown=nextjs:nodejs /app/apps/spectrumfibre/.next/static ./apps/spectrumfibre/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/spectrumfibre/public ./apps/spectrumfibre/public
 
-EXPOSE 3003
+EXPOSE 3000
 
 CMD node apps/spectrumfibre/server.js
