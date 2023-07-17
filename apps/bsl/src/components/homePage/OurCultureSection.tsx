@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Animate } from "../animations/ScrollAnimator";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSlide = ({
   title,
@@ -92,7 +93,10 @@ const Carousel = () => {
             ref={swiperNavPrevRef}
             onClick={() => swiperRef!.current?.slidePrev()}
           >
-            <img src="/assets/icons/nav-left.svg" className=" w-full " />
+            <img
+              src={prefixAssetPath("/assets/icons/nav-left.svg")}
+              className=" w-full "
+            />
           </button>
 
           <button
@@ -100,7 +104,10 @@ const Carousel = () => {
             ref={swiperNavNextRef}
             onClick={() => swiperRef!.current?.slideNext()}
           >
-            <img src="/assets/icons/nav-right.svg" className="w-full" />
+            <img
+              src={prefixAssetPath("/assets/icons/nav-right.svg")}
+              className="w-full"
+            />
           </button>
         </div>
       </Swiper>

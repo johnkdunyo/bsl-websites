@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { Animate } from "../animations/ScrollAnimator";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSubsidiaryCard = ({
   imageURL,
@@ -18,7 +19,11 @@ const SingleSubsidiaryCard = ({
       <div className="bg-[#FFFFFF] w-full  justify-between p-8 rounded-[50px] flex flex-col gap-6 sm:h-[23rem] ">
         <div>
           <div className="h-20  flex items-start justify-start">
-            <img src={imageURL} alt="spectrum" className="h-full  " />
+            <img
+              src={prefixAssetPath(imageURL)}
+              alt="spectrum"
+              className="h-full  "
+            />
           </div>
           <p className="text-[#1D365A] paragraphText1 ">{description}</p>
         </div>

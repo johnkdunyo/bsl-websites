@@ -3,7 +3,7 @@ import { Animate } from "../animations/ScrollAnimator";
 
 const HeroSection = () => {
   return (
-    <section className=" bg-[url('/assets/img/backgrounds/career.jpeg')] h-[70vh] sm:h-[65vh] md:h-[68vh] bg-cover  bg-center top-0 ">
+    <section className=" bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689582042/bsl-website/bsl/career/career_nkvozf.jpg')] h-[70vh] sm:h-[65vh] md:h-[68vh] bg-cover  bg-center top-0 ">
       <div className="backdrop-brightness-50 sm:backdrop-brightness-[0.8] h-full w-full">
         <div className=" container mx-auto text-white flex h-full px-4 sm:px-0  justify-center sm:items-end  pb-10  relative ">
           {/* mobile */}

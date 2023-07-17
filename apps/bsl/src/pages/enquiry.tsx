@@ -1,6 +1,7 @@
 import SiteLayout from "@/components/Layout/SiteLayout";
 import CustomBackground1 from "@/components/animations/CustomBackground1";
 import CustomInput from "@/components/uiComponents/CustomInput";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 import React, { useState } from "react";
 
 interface IEnquiryTypeData {
@@ -42,7 +43,7 @@ const Enquiry = () => {
         </button>
         {currentEnquiryType.id === enquiry.id && (
           <img
-            src="/assets/icons/enquiry-active.svg"
+            src={prefixAssetPath("/assets/icons/enquiry-active.svg")}
             className="absolute left-1/2 right-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2"
           />
         )}

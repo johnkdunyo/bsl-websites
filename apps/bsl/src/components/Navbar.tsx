@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { MouseEvent, useEffect, useRef, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-
 import {
   HiChevronDown,
   HiChevronLeft,
   HiChevronRight,
   HiChevronUp,
 } from "react-icons/hi";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 interface INavs {
   id: number;
@@ -23,34 +23,36 @@ interface ISubsidiaryNavs extends INavs {
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
+console.log("env", process.env.NODE_ENV);
+
 const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 1,
     title: "BSL Home",
-    href: `${baseUrl}:3000`,
-    imgSRC: "/assets/icons/bsl-main.svg",
-    imgSRC2: "/assets/icons/bsl-main.svg",
+    href: `${baseUrl}:3300`,
+    imgSRC: prefixAssetPath("/assets/icons/bsl-main.svg"),
+    imgSRC2: prefixAssetPath("/assets/icons/bsl-main.svg"),
   },
   {
     id: 2,
     title: "Spectrum Fibre",
-    href: `${baseUrl}:3003`,
-    imgSRC: "/assets/icons/spectrum-main.svg",
-    imgSRC2: "/assets/icons/spectrum.svg",
+    href: `${baseUrl}:3303`,
+    imgSRC: prefixAssetPath("/assets/icons/spectrum-main.svg"),
+    imgSRC2: prefixAssetPath("/assets/icons/spectrum.svg"),
   },
   {
     id: 3,
     title: "Infra Services",
-    href: `${baseUrl}:3002`,
-    imgSRC: "/assets/icons/isg-main.svg",
-    imgSRC2: "/assets/icons/isg.svg",
+    href: `${baseUrl}:3302`,
+    imgSRC: prefixAssetPath("/assets/icons/isg-main.svg"),
+    imgSRC2: prefixAssetPath("/assets/icons/isg.svg"),
   },
   {
     id: 4,
     title: "Digital Payment",
-    href: `${baseUrl}:3001`,
-    imgSRC: "/assets/icons/bdp-main.svg",
-    imgSRC2: "/assets/icons/bdp.svg",
+    href: `${baseUrl}:3301`,
+    imgSRC: prefixAssetPath("/assets/icons/bdp-main.svg"),
+    imgSRC2: prefixAssetPath("/assets/icons/bdp.svg"),
   },
 ];
 
@@ -155,7 +157,7 @@ const CustomNavList = ({ title, href }: { title: string; href: string }) => {
         {showArrow && (
           <img
             alt="arrow left"
-            src="/assets/icons/navs/right-red.svg"
+            src={prefixAssetPath("/assets/icons/navs/right-red.svg")}
             className="-ml-6 pr-10"
           />
         )}
@@ -216,8 +218,8 @@ const Navbar = ({ pageName }: INavbar) => {
     id: 1,
     title: "BSL Home",
     href: "/",
-    imgSRC: "/assets/icons/bsl-main.svg",
-    imgSRC2: "/assets/icons/bsl-main.svg",
+    imgSRC: prefixAssetPath("/assets/icons/bsl-main.svg"),
+    imgSRC2: prefixAssetPath("/assets/icons/bsl-main.svg"),
   });
 
   useEffect(() => {
@@ -243,8 +245,8 @@ const Navbar = ({ pageName }: INavbar) => {
         id: 4,
         title: "Digital Payment",
         href: "/bdp",
-        imgSRC: "/assets/icons/bdp-main.svg",
-        imgSRC2: "/assets/icons/bdp.svg",
+        imgSRC: prefixAssetPath("/assets/icons/bdp-main.svg"),
+        imgSRC2: prefixAssetPath("/assets/icons/bdp.svg"),
       });
       setRestOfNavs(
         WebSubsidiaryNavs.filter((nav) => nav.title !== "Digital Payment")
@@ -256,8 +258,8 @@ const Navbar = ({ pageName }: INavbar) => {
         id: 3,
         title: "Infra Services",
         href: "/isg",
-        imgSRC: "/assets/icons/isg-main.svg",
-        imgSRC2: "/assets/icons/isg.svg",
+        imgSRC: prefixAssetPath("/assets/icons/isg-main.svg"),
+        imgSRC2: prefixAssetPath("/assets/icons/isg.svg"),
       });
       setRestOfNavs(
         WebSubsidiaryNavs.filter((nav) => nav.title !== "Infra Services")
@@ -329,7 +331,10 @@ const Navbar = ({ pageName }: INavbar) => {
               setOpenSubsidiaryMenu(false);
             }}
           >
-            <img src="/assets/icons/home-2.svg" className="h-4/5" />
+            <img
+              src={prefixAssetPath("/assets/icons/home-2.svg")}
+              className="h-4/5"
+            />
           </button>
         </div>
 
@@ -413,7 +418,7 @@ const Navbar = ({ pageName }: INavbar) => {
             </div>
             <button onClick={() => setOpenDesktopSiteMenu((prev) => !prev)}>
               <img
-                src="/assets/icons/home-2.svg"
+                src={prefixAssetPath("/assets/icons/home-2.svg")}
                 className="h-10  fill-primary"
                 alt="menu icon"
               />
@@ -520,7 +525,10 @@ const Navbar = ({ pageName }: INavbar) => {
                   setOpenSubsidiaryMenu(false);
                 }}
               >
-                <img src="/assets/icons/home-2-close.svg" className="h-4/5" />
+                <img
+                  src={prefixAssetPath("/assets/icons/home-2-close.svg")}
+                  className="h-4/5"
+                />
               </button>
             </div>
 
@@ -556,7 +564,10 @@ const Navbar = ({ pageName }: INavbar) => {
                   onClick={() => setOpenMediaDropdown((prev) => !prev)}
                 >
                   Media
-                  <img src="/assets/icons/navs/down-blue.svg" className=" " />
+                  <img
+                    src={prefixAssetPath("/assets/icons/navs/down-blue.svg")}
+                    className=" "
+                  />
                 </button>
                 <div
                   className={`${
@@ -582,16 +593,24 @@ const Navbar = ({ pageName }: INavbar) => {
               </h1>
               <div className="grid grid-cols-2 gap-4">
                 <button className="col">
-                  <img src="/assets/icons/menu-nav/bdp.svg" />
+                  <img
+                    src={prefixAssetPath("/assets/icons/menu-nav/bdp.svg")}
+                  />
                 </button>
                 <button className="col">
-                  <img src="/assets/icons/menu-nav/spectrum.svg" />
+                  <img
+                    src={prefixAssetPath("/assets/icons/menu-nav/spectrum.svg")}
+                  />
                 </button>
                 <button className="col">
-                  <img src="/assets/icons/menu-nav/isg.svg" />
+                  <img
+                    src={prefixAssetPath("/assets/icons/menu-nav/isg.svg")}
+                  />
                 </button>
                 <button className="col">
-                  <img src="/assets/icons/menu-nav/eagric.svg" />
+                  <img
+                    src={prefixAssetPath("/assets/icons/menu-nav/eagric.svg")}
+                  />
                 </button>
               </div>
             </div>
@@ -693,7 +712,7 @@ const Navbar = ({ pageName }: INavbar) => {
                 </div>
                 <button onClick={() => setOpenDesktopSiteMenu((prev) => !prev)}>
                   <img
-                    src="/assets/icons/close-red.svg"
+                    src={prefixAssetPath("/assets/icons/close-red.svg")}
                     className="h-10 "
                     alt="menu icon"
                   />
@@ -755,7 +774,9 @@ const Navbar = ({ pageName }: INavbar) => {
                   <div className="w-full flex gap-6 flex-col text-2xl">
                     <div className="flex items-center gap-2">
                       <img
-                        src="/assets/icons/arrow-right-blue.svg"
+                        src={prefixAssetPath(
+                          "/assets/icons/arrow-right-blue.svg"
+                        )}
                         alt="get directions"
                         className="-ml-10"
                       />
@@ -787,7 +808,9 @@ const Navbar = ({ pageName }: INavbar) => {
                       onHoverEnd={(e) => {}}
                     >
                       <img
-                        src="/assets/icons/arrow-right-blue.svg"
+                        src={prefixAssetPath(
+                          "/assets/icons/arrow-right-blue.svg"
+                        )}
                         alt="get directions"
                       />
                       <h1 className="uppercase tracking-widest text-xl ">
