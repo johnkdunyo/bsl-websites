@@ -8,7 +8,7 @@ import {
   HiChevronRight,
   HiChevronUp,
 } from "react-icons/hi";
-import prefixAssetPath from "@/utils/prefixAssetPath";
+import prefixAssetPath from "../utils/prefixAssetPath";
 
 interface INavs {
   id: number;
@@ -21,9 +21,13 @@ interface ISubsidiaryNavs extends INavs {
   imgSRC2: string;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+const envType = process.env.NODE_ENV;
+let baseUrl =
+  envType === "production"
+    ? process.env.NEXT_PUBLIC_BASE_URL
+    : "http://localhost";
 
-console.log("env", process.env.NODE_ENV);
+console.log("env", baseUrl);
 
 const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
@@ -56,6 +60,8 @@ const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   },
 ];
 
+console.log(WebSubsidiaryNavs);
+
 interface INavbar {
   pageName:
     | "BSL Home"
@@ -82,9 +88,10 @@ const NavButton = ({ active, title, href, imgSRC }: INavbarNavButtons) => {
       className={` ${
         active ? "bg-transparent" : "bg-transparent"
       }  px-6 w-full   h-10 relative`}
+      onClick={() => console.log("click me")}
     >
-      <Link href={href}>
-        <Image src={imgSRC} alt={title} className="  " fill />
+      <Link href={href} className="">
+        <Image src={imgSRC} alt={title} className=" " fill />
       </Link>
     </button>
   );
@@ -190,8 +197,6 @@ const CustomNavList = ({ title, href }: { title: string; href: string }) => {
   );
 };
 
-const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-
 const Navbar = ({ pageName }: INavbar) => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -227,9 +232,9 @@ const Navbar = ({ pageName }: INavbar) => {
       if (!mobileMenuRef.current?.contains(e.target)) {
         setOpenSubsidiaryMenu(false);
       }
-      if (!ourPortfolioDropdownRef.current?.contains(e.target)) {
-        setShowOurPortfolioDropdown(false);
-      }
+      // if (!ourPortfolioDropdownRef.current?.contains(e.target)) {
+      //   setShowOurPortfolioDropdown(false);
+      // }
     };
 
     document.addEventListener("mousedown", clickHandler);
@@ -465,6 +470,7 @@ const Navbar = ({ pageName }: INavbar) => {
           </div>
         </div>
 
+        {/* white bg dropdown */}
         {/* mobile and desktop screen menu nav */}
         <motion.div
           animate={{ type: "spring", opacity: 1 }}

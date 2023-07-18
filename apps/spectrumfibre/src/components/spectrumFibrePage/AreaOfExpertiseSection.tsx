@@ -2,6 +2,7 @@ import React from "react";
 import useMeasure from "react-use-measure";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Animate } from "../animations/ScrollAnimator";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSection = ({
   title,
@@ -25,7 +26,7 @@ const SingleSection = ({
         style={{ minHeight: `${height + 225}px` }}
       >
         <img
-          src={`/assets/img/spectrum/${imgURL}`}
+          src={imgURL}
           className="rounded-[50px] object-cover  w-full h-[22rem] px-2 absolute z-10"
         />
         <div
@@ -75,7 +76,7 @@ const SingleSection = ({
         </div>
         <div className="w-full ">
           <img
-            src={`/assets/img/spectrum/${imgURL}`}
+            src={imgURL}
             className="rounded-[80px] object-cover h-[35rem]  w-full   "
           />
         </div>
@@ -97,7 +98,7 @@ const AreaOfExpertiseSection = () => {
         <div className="mt-20 flex flex-col justify-between gap-12 md:gap-20 ">
           <SingleSection
             title="Dedicated Internet"
-            imgURL="dedicated-internet.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604341/bsl-website/spectrum-fibre/dedicated-internet_yyawej.jpg"
             description={[
               "Suitable for ISPs, schools, research institutions, banks, government organizations, and any other institution that requires high performance internet.",
             ]}
@@ -105,7 +106,7 @@ const AreaOfExpertiseSection = () => {
 
           <SingleSection
             title="Backhaul Solutions"
-            imgURL="backhaul.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604342/bsl-website/spectrum-fibre/backhaul_uwau6f.jpg"
             txtPosition={"right"}
             description={[
               "Suitable for ISPs and Telecom service providers such as GLO, Prodata, etc.",
@@ -115,7 +116,7 @@ const AreaOfExpertiseSection = () => {
           />
           <SingleSection
             title="Wavelength Solutions"
-            imgURL="wavelength.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604343/bsl-website/spectrum-fibre/wavelength_azfc46.jpg"
             description={[
               "Delivered over our state-of-the-art Dense Wave Division Multiplexing (DWDM) network",
               "An ideal solution for data center backup and recovery sites, research institutions, and wholesale internet carriers",
@@ -123,7 +124,7 @@ const AreaOfExpertiseSection = () => {
           />
           <SingleSection
             title="Dark Fiber"
-            imgURL="dark-fibre.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604341/bsl-website/spectrum-fibre/dark-fibre_munhyi.jpg"
             txtPosition={"right"}
             description={[
               "Suitable for telcos, and wholesale internet carriers",
@@ -131,7 +132,7 @@ const AreaOfExpertiseSection = () => {
           />
           <SingleSection
             title="Software-Defined Wide Area Network"
-            imgURL="software.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604343/bsl-website/spectrum-fibre/software_cwjqib.jpg"
             description={[
               "Suitable for telcos, and wholesale internet carriers",
             ]}

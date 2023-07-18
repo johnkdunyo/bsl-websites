@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import BDPPaymentLottieData from "../../../public/assets/lottie/bdp-payment.json";
 import Lottie from "react-lottie";
 import { Animate } from "../animations/ScrollAnimator";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const lottieDefaultOptions = {
   loop: true,
@@ -27,7 +28,7 @@ const SingleItem = ({
             whileHover={{ scale: 1.2 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
-            src={`/assets/img/bdp/discover/${icon}`}
+            src={prefixAssetPath(`/assets/img/bdp/discover/${icon}`)}
             className="h-4/5 sm:h-3/5"
           />
         </div>
@@ -47,7 +48,7 @@ const SingleItem = ({
 const DiscoverBusinessSection = () => {
   return (
     <section className="bg-white ">
-      <section className="bg-[url('/assets/img/bdp/mobile-purple-bg.svg')] md:bg-[url('/assets/img/bdp/purple-bg.svg')] h-[80rem] bg-cover  bg-no-repeat sm:-mt-[12rem] -mt-[2rem] w-full  pt-32 sm:py-[27rem] z-20  ">
+      <section className="bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593106/bsl-website/bdp/mobile-purple-bg_e30uc4.svg')] md:bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593107/bsl-website/bdp/purple-bg_ijgw50.svg')] h-[80rem] bg-cover  bg-no-repeat sm:-mt-[12rem] -mt-[2rem] w-full  pt-32 sm:py-[27rem] z-20  ">
         <div className=" w-full text-white  custom-container flex flex-col gap-14  z-20 ">
           <Animate.FadeUp className="headerText3 text-center">
             Discover solutions for every business need

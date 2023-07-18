@@ -13,7 +13,7 @@ const AboutSection = () => {
 
         <div className=" w-full flex flex-col md:flex-row md:gap-10 gap-0">
           <div className="w-full md:w-3/5">
-            <img src="/assets/img/isg/isg1.jpeg" />
+            <img src="https://res.cloudinary.com/diek2uivi/image/upload/v1689604922/bsl-website/isg/isg1_n8xob7.jpg" />
           </div>
           <div className="w-full md:w-2/5 mt-[10%]">
             <Animate.FadeUp className="text-primary text-base   leading-relaxed px-2 md:px-0">

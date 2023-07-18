@@ -13,6 +13,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import CustomBackground1 from "../animations/CustomBackground1";
 import Link from "next/link";
 import Image from "next/image";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSlide = ({
   id,
@@ -213,7 +214,10 @@ const LeadershipTeam = () => {
                 ref={swiperNavPrevRef}
                 onClick={() => swiperRef!.current?.slidePrev()}
               >
-                <img src="/assets/icons/nav-left.svg" className=" w-full " />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-left.svg")}
+                  className=" w-full "
+                />
               </button>
 
               <button
@@ -221,7 +225,10 @@ const LeadershipTeam = () => {
                 ref={swiperNavNextRef}
                 onClick={() => swiperRef!.current?.slideNext()}
               >
-                <img src="/assets/icons/nav-right.svg" className="w-full" />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-right.svg")}
+                  className="w-full"
+                />
               </button>
             </div>
           </Swiper>

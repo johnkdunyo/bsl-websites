@@ -59,7 +59,7 @@ const SingleSection = ({
         style={{ minHeight: `${height + 225}px` }}
       >
         <img
-          src={`/assets/img/isg/${imgURL}`}
+          src={imgURL}
           className="rounded-[50px] object-cover  w-full h-[22rem] px-2 absolute z-10"
         />
         <div
@@ -97,7 +97,7 @@ const SingleSection = ({
         </div>
         <div className="w-full ">
           <img
-            src={`/assets/img/isg/${imgURL}`}
+            src={imgURL}
             className="rounded-[80px] object-cover h-[30rem]  w-full   "
           />
         </div>
@@ -127,30 +127,30 @@ const OurSolutionSection = () => {
         <div className="mt-20 flex flex-col justify-between gap-12 md:gap-20 ">
           <SingleSection
             title="Fibre Infrastructure Deployment"
-            imgURL="fibre.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604922/bsl-website/isg/fibre_uvj7eh.jpg"
             description="At ISG, we specialize in providing comprehensive fibre infrastructure deployment services to meet the growing demands of the telecommunications industry. Our team of experts is highly experienced in designing, deploying, and maintaining fibre optic networks, ensuring that our clients receive the highest quality solutions."
           />
 
           <SingleSection
             title="Microwave <br/> Radio Deployment"
-            imgURL="microwave.jpg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604923/bsl-website/isg/microwave_nujwez.jpg"
             txtPosition={"right"}
             description="As a trusted fiber maintenance company, we offer expert installation and configuration of microwave radio links. Our streamlined approach eliminates the need for costly infrastructure investments, allowing expansion of network coverage quickly and efficiently."
           />
           <SingleSection
             title="LAN Infrastructure Deployments"
-            imgURL="lan.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604922/bsl-website/isg/lan_t8tiwx.jpg"
             description="As a leading provider of fiber maintenance solutions, we specialize in the seamless installation and configuration of Local Area Networks (LANs) for businesses. Our team ensures efficient deployment, eliminating the need for in-house resources. Experience reliable and high-speed connectivity, smooth data transfer, collaboration, and enhanced productivity today."
           />
           <SingleSection
             title="Data Centre <br/> Build and Management"
-            imgURL="datacenter.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604922/bsl-website/isg/datacenter_vwpiq3.jpg"
             txtPosition={"right"}
             description="We specialize in designing, constructing, and managing state-of-the-art data centers tailored to meet your organization&lsquo;s unique needs. With our proactive monitoring and maintenance services, you can trust that your data centre will operate at peak efficiency, minimizing downtime and ensuring uninterrupted operations."
           />
           <SingleSection
             title="Service Maintenance <br/>and Support"
-            imgURL="service.jpeg"
+            imgURL="https://res.cloudinary.com/diek2uivi/image/upload/v1689604924/bsl-website/isg/service_wrh76x.jpg"
             description="Our expert technicians are available 24/7 to address any issues, minimize downtime and maximize productivity. We run regular maintenance checks and timely updates, to that your systems are running at peak efficiency. Trust us to deliver prompt and reliable support, allowing you to focus on your core business activities with peace of mind."
           />
         </div>

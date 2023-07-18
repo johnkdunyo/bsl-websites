@@ -7,7 +7,7 @@ const ReliableSection = () => {
       <div className="w-full flex flex-col md:flex-row  h-full">
         <div className="w-full h-full ">
           <img
-            src="/assets/img/isg/isg2.jpeg"
+            src="https://res.cloudinary.com/diek2uivi/image/upload/v1689604922/bsl-website/isg/isg2_t2e9zk.jpg"
             className="w-full h-full object-cover"
           />
         </div>
