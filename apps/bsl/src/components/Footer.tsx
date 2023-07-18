@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { Animate } from "./animations/ScrollAnimator";
-import siteMetaData from "@/data/siteMetaData";
-import prefixAssetPath from "@/utils/prefixAssetPath";
+import siteMetaData from "../data/siteMetaData";
+import prefixAssetPath from "../utils/prefixAssetPath";
 
 const SocialMediaButtons = ({ name, href }: { name: string; href: string }) => {
   return (

@@ -160,7 +160,7 @@ const LeadershipTeam = () => {
                 }
                 imgHeight={882}
                 imgWidth={706}
-                href="/about/sam"
+                href="/about/4"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -175,7 +175,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065716/bsl-website/bsl/board/razak_sbkf2x.png"
                 imgHeight={1026}
                 imgWidth={732}
-                href="/about/razak"
+                href="/about/1"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -190,7 +190,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065715/bsl-website/bsl/board/nana_lwkean.png"
                 imgHeight={994}
                 imgWidth={650}
-                href="/about/nana"
+                href="/about/2"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -205,7 +205,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065715/bsl-website/bsl/board/kris_nfhaym.png"
                 imgHeight={448}
                 imgWidth={334}
-                href="/about/kris"
+                href="/about/3"
               />
             </SwiperSlide>
             <div className=" flex justify-between   absolute top-[50%] bottom-[50%] w-full sm:px-10 px-2">
