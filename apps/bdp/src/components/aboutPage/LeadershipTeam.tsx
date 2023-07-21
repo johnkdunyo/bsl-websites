@@ -13,6 +13,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import CustomBackground1 from "../animations/CustomBackground1";
 import Link from "next/link";
 import Image from "next/image";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSlide = ({
   id,
@@ -159,7 +160,7 @@ const LeadershipTeam = () => {
                 }
                 imgHeight={882}
                 imgWidth={706}
-                href="/about/sam"
+                href="/about/4"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -174,7 +175,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065716/bsl-website/bsl/board/razak_sbkf2x.png"
                 imgHeight={1026}
                 imgWidth={732}
-                href="/about/razak"
+                href="/about/1"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -189,7 +190,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065715/bsl-website/bsl/board/nana_lwkean.png"
                 imgHeight={994}
                 imgWidth={650}
-                href="/about/nana"
+                href="/about/2"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -204,7 +205,7 @@ const LeadershipTeam = () => {
                 imageURL="https://res.cloudinary.com/diek2uivi/image/upload/v1686065715/bsl-website/bsl/board/kris_nfhaym.png"
                 imgHeight={448}
                 imgWidth={334}
-                href="/about/kris"
+                href="/about/3"
               />
             </SwiperSlide>
             <div className=" flex justify-between   absolute top-[50%] bottom-[50%] w-full sm:px-10 px-2">
@@ -213,7 +214,10 @@ const LeadershipTeam = () => {
                 ref={swiperNavPrevRef}
                 onClick={() => swiperRef!.current?.slidePrev()}
               >
-                <img src="/assets/icons/nav-left.svg" className=" w-full " />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-left.svg")}
+                  className=" w-full "
+                />
               </button>
 
               <button
@@ -221,7 +225,10 @@ const LeadershipTeam = () => {
                 ref={swiperNavNextRef}
                 onClick={() => swiperRef!.current?.slideNext()}
               >
-                <img src="/assets/icons/nav-right.svg" className="w-full" />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-right.svg")}
+                  className="w-full"
+                />
               </button>
             </div>
           </Swiper>

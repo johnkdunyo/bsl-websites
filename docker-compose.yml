@@ -4,14 +4,10 @@ services:
   apache:
     container_name: apache
     build: 
-      context: .
-      dockerfile: "./apache/Dockerfile"
+      context: apache
+      dockerfile: Dockerfile
     ports:
-      - 8008:80
-    volumes:
-      - ./apache/apache-config/httpd.conf:/usr/local/apache2/conf/httpd.conf
-      - ./apache/logs:/var/log/apache2/
-      - ./apache/htdocs:/usr/local/apache2/htdocs
+      - "8088:80"
     depends_on:
       - bsl
       - bdp
@@ -19,56 +15,47 @@ services:
       - spectrumfibre
     networks:
       - apps_network
-    
-
   bsl:
     container_name: bsl
     build:
       context: .
       dockerfile: ./apps/bsl/Dockerfile
     ports:
-      - 3000:3000
+      - "${BSL_APP_PORT}:3000"
     environment:
-      - PORT=3000
       - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
     networks:
       - apps_network
-
   bdp:
     container_name: bdp
     build:
       context: .
       dockerfile: ./apps/bdp/Dockerfile
     ports:
-      - 3001:3001
+      - "${BDP_APP_PORT}:3000"
     environment:
-      - PORT=3001
       - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
     networks:
       - apps_network
-
   isg:
     container_name: isg
     build:
       context: .
       dockerfile: ./apps/isg/Dockerfile
     ports:
-      - 3002:3002
+      - "${ISG_APP_PORT}:3000"
     environment:
-      - PORT=3002
       - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
     networks:
       - apps_network
-
   spectrumfibre:
     container_name: spectrumfibre
     build:
       context: .
       dockerfile: ./apps/spectrumfibre/Dockerfile
     ports:
-      - 3003:3003
+      - "${SFB_APP_PORT}:3000"
     environment:
-      - PORT=3003
       - HOSTNAME=${NEXT_PUBLIC_BASE_URL}
     networks:
       - apps_network

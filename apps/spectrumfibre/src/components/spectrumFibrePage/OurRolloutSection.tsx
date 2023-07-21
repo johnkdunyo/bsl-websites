@@ -19,7 +19,7 @@ const OurRolloutSection = () => {
 
         <div className="my-4">
           <img
-            src="/assets/img/spectrum/sfc-map.svg"
+            src="https://res.cloudinary.com/diek2uivi/image/upload/v1689604343/bsl-website/spectrum-fibre/sfc-map_urferk.svg"
             className="object-cover h-full w-full"
           />
         </div>
@@ -59,7 +59,7 @@ const OurRolloutSection = () => {
 
         <div className="w-[60%] ">
           <img
-            src="/assets/img/spectrum/sfc-map.svg"
+            src="https://res.cloudinary.com/diek2uivi/image/upload/v1689604343/bsl-website/spectrum-fibre/sfc-map_urferk.svg"
             className="object-cover  w-full h-full"
           />
         </div>

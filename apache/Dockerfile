@@ -1,20 +1,14 @@
-# Use the official Apache image as the base image
 FROM httpd:2.4
 
-# Install required Apache modules
-RUN sed -i '/LoadModule proxy_module/s/^#//g' /usr/local/apache2/conf/httpd.conf && \
-    sed -i '/LoadModule proxy_http_module/s/^#//g' /usr/local/apache2/conf/httpd.conf && \
-    sed -i '/LoadModule proxy_html_module/s/^#//g' /usr/local/apache2/conf/httpd.conf && \
-    sed -i '/LoadModule rewrite_module/s/^#//g' /usr/local/apache2/conf/httpd.conf
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -r /var/lib/apt/lists/*
 
-# Copy your custom Apache reverse proxy configuration file
-COPY ./apache/apache-config/httpd.conf /usr/local/apache2/conf/extra/httpd.conf
+RUN echo "LoadModule proxy_module modules/mod_proxy.so" >> /usr/local/apache2/conf/httpd.conf \
+    && echo "LoadModule proxy_http_module modules/mod_proxy_http.so" >> /usr/local/apache2/conf/httpd.conf \
+    && echo "LoadModule unixd_module modules/mod_unixd.so" >> /usr/local/apache2/conf/httpd.conf
 
-# Create the htdocs directory if it doesn't exist
-RUN mkdir -p /usr/local/apache2/htdocs
 
-# Expose port 80 for Apache
+COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
+
 EXPOSE 80
-
-# Start Apache as the main process
-CMD ["httpd", "-D", "FOREGROUND"]

@@ -57,6 +57,6 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/isg/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/isg/.next/static ./apps/isg/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/isg/public ./apps/isg/public
 
-EXPOSE 3002
+EXPOSE 3000
 
 CMD node apps/isg/server.js

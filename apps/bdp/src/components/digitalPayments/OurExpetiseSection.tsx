@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Animate } from "../animations/ScrollAnimator";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleMobileCustomCard = ({
   title,
@@ -15,7 +16,7 @@ const SingleMobileCustomCard = ({
         <div className="flex items-center justify-center   h-16 w-20 md:h-20 md:w-24 flex-col ">
           <motion.img
             whileHover={{ scale: 1.2 }}
-            src={`/assets/img/bdp/expertise/${icon}`}
+            src={prefixAssetPath(`/assets/img/bdp/expertise/${icon}`)}
             alt={icon}
             className=" "
           />

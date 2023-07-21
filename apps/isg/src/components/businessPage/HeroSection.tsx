@@ -19,7 +19,10 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           playsInline
         >
-          <source src="/assets/videos/business.webm" type="video/webm" />
+          <source
+            src="https://res.cloudinary.com/diek2uivi/video/upload/v1689352924/bsl-website/bsl/business/business_zpbell.webm"
+            type="video/webm"
+          />
           <p>browssr does not support</p>
         </video>
       </div>

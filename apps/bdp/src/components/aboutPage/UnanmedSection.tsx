@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { Animate } from "../animations/ScrollAnimator";
 import Image from "next/image";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleComponent = ({
   imageURL,
@@ -120,7 +121,7 @@ const UnanmedSection = () => {
               onClick={() => swiperRef!.current?.slidePrev()}
             >
               <img
-                src="/assets/icons/navs/left-blue.svg"
+                src={prefixAssetPath("/assets/icons/navs/left-blue.svg")}
                 className=" w-full "
               />
             </button>
@@ -130,7 +131,10 @@ const UnanmedSection = () => {
               ref={swiperNavNextRef}
               onClick={() => swiperRef!.current?.slideNext()}
             >
-              <img src="/assets/icons/navs/right-blue.svg" className="w-full" />
+              <img
+                src={prefixAssetPath("/assets/icons/navs/right-blue.svg")}
+                className="w-full"
+              />
             </button>
           </div>
         </div>
