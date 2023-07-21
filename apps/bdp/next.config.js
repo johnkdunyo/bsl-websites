@@ -12,7 +12,8 @@ const nextConfig = {
     domains: [
       'res.cloudinary.com',
     ]
-  }
+  },
+  transpilePackages: ["shared-components"]
 }
 
 module.exports = nextConfig
