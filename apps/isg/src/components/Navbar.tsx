@@ -28,7 +28,7 @@ const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 1,
     title: "BSL Home",
-    href: isProd ? "http://localhost:8088/bsl" : "http://localhost:3300",
+    href: isProd ? "http://20.31.249.143/bsl" : "http://localhost:3300",
     imgSRC: prefixAssetPath("/assets/icons/bsl-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/bsl-main.svg"),
   },
@@ -36,7 +36,7 @@ const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
     id: 2,
     title: "Spectrum Fibre",
     href: isProd
-      ? "http://localhost:8088/spectrumfibre"
+      ? "http://20.31.249.143/spectrumfibre"
       : "http://localhost:3303",
     imgSRC: prefixAssetPath("/assets/icons/spectrum-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/spectrum.svg"),
@@ -44,14 +44,14 @@ const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 3,
     title: "Infra Services",
-    href: isProd ? "http://localhost:8088/isg" : "http://localhost:3302",
+    href: isProd ? "http://20.31.249.143/isg" : "http://localhost:3302",
     imgSRC: prefixAssetPath("/assets/icons/isg-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/isg.svg"),
   },
   {
     id: 4,
     title: "Digital Payment",
-    href: isProd ? "http://localhost:8088/bdp" : "http://localhost:33001",
+    href: isProd ? "http://20.31.249.143/bdp" : "http://localhost:33001",
     imgSRC: prefixAssetPath("/assets/icons/bdp-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/bdp.svg"),
   },
