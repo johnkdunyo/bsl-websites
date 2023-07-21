@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { MouseEvent, useEffect, useRef, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
+
 import {
   HiChevronDown,
   HiChevronLeft,
@@ -21,40 +22,36 @@ interface ISubsidiaryNavs extends INavs {
   imgSRC2: string;
 }
 
-const envType = process.env.NODE_ENV;
-let baseUrl =
-  envType === "production"
-    ? process.env.NEXT_PUBLIC_BASE_URL
-    : "http://localhost";
-
-console.log("env", baseUrl);
+const isProd = process.env.NODE_ENV === "production";
 
 const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 1,
     title: "BSL Home",
-    href: `${baseUrl}:3300`,
+    href: isProd ? "http://localhost:8088/bsl" : "http://localhost:3300",
     imgSRC: prefixAssetPath("/assets/icons/bsl-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/bsl-main.svg"),
   },
   {
     id: 2,
     title: "Spectrum Fibre",
-    href: `${baseUrl}:3303`,
+    href: isProd
+      ? "http://localhost:8088/spectrumfibre"
+      : "http://localhost:3303",
     imgSRC: prefixAssetPath("/assets/icons/spectrum-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/spectrum.svg"),
   },
   {
     id: 3,
     title: "Infra Services",
-    href: `${baseUrl}:3302`,
+    href: isProd ? "http://localhost:8088/isg" : "http://localhost:3302",
     imgSRC: prefixAssetPath("/assets/icons/isg-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/isg.svg"),
   },
   {
     id: 4,
     title: "Digital Payment",
-    href: `${baseUrl}:3301`,
+    href: isProd ? "http://localhost:8088/bdp" : "http://localhost:33001",
     imgSRC: prefixAssetPath("/assets/icons/bdp-main.svg"),
     imgSRC2: prefixAssetPath("/assets/icons/bdp.svg"),
   },
@@ -87,11 +84,10 @@ const NavButton = ({ active, title, href, imgSRC }: INavbarNavButtons) => {
     <button
       className={` ${
         active ? "bg-transparent" : "bg-transparent"
-      }  px-6 w-full   h-10 relative`}
-      onClick={() => console.log("click me")}
+      }  px-6 w-full   h-10 relative `}
     >
-      <Link href={href} className="">
-        <Image src={imgSRC} alt={title} className=" " fill />
+      <Link href={href}>
+        <Image src={imgSRC} alt={title} className="  " fill />
       </Link>
     </button>
   );
@@ -197,6 +193,8 @@ const CustomNavList = ({ title, href }: { title: string; href: string }) => {
   );
 };
 
+const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+
 const Navbar = ({ pageName }: INavbar) => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -219,13 +217,9 @@ const Navbar = ({ pageName }: INavbar) => {
     (nav) => nav.title !== "BSL Home"
   );
 
-  const [currentNav, setCurrentNav] = useState<ISubsidiaryNavs>({
-    id: 1,
-    title: "BSL Home",
-    href: "/",
-    imgSRC: prefixAssetPath("/assets/icons/bsl-main.svg"),
-    imgSRC2: prefixAssetPath("/assets/icons/bsl-main.svg"),
-  });
+  const [currentNav, setCurrentNav] = useState<ISubsidiaryNavs>(
+    WebSubsidiaryNavs[0]
+  );
 
   useEffect(() => {
     let clickHandler = (e: any) => {
@@ -246,39 +240,27 @@ const Navbar = ({ pageName }: INavbar) => {
 
   useEffect(() => {
     if (pageName === "Digital Payment") {
-      setCurrentNav({
-        id: 4,
-        title: "Digital Payment",
-        href: "/bdp",
-        imgSRC: prefixAssetPath("/assets/icons/bdp-main.svg"),
-        imgSRC2: prefixAssetPath("/assets/icons/bdp.svg"),
-      });
+      setCurrentNav(
+        WebSubsidiaryNavs.find((nav) => nav.title === "Digital Payment")!
+      );
       setRestOfNavs(
         WebSubsidiaryNavs.filter((nav) => nav.title !== "Digital Payment")
       );
     }
 
     if (pageName === "Infra Services") {
-      setCurrentNav({
-        id: 3,
-        title: "Infra Services",
-        href: "/isg",
-        imgSRC: prefixAssetPath("/assets/icons/isg-main.svg"),
-        imgSRC2: prefixAssetPath("/assets/icons/isg.svg"),
-      });
+      setCurrentNav(
+        WebSubsidiaryNavs.find((nav) => nav.title === "Infra Services")!
+      );
       setRestOfNavs(
         WebSubsidiaryNavs.filter((nav) => nav.title !== "Infra Services")
       );
     }
 
     if (pageName === "Spectrum Fibre") {
-      setCurrentNav({
-        id: 2,
-        title: "Spectrum Fibre",
-        href: "/spectrumfibre",
-        imgSRC: "/assets/icons/spectrum-main.svg",
-        imgSRC2: "/assets/icons/spectrum.svg",
-      });
+      setCurrentNav(
+        WebSubsidiaryNavs.find((nav) => nav.title === "Spectrum Fibre")!
+      );
       setRestOfNavs(
         WebSubsidiaryNavs.filter((nav) => nav.title !== "Spectrum Fibre")
       );
