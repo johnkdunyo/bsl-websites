@@ -25,3 +25,6 @@
 [Tue Jul 11 18:32:44.757712 2023] [core:crit] [pid 8:tid 281472954986784] [client 172.26.0.1:34806] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://0.0.0.0:8008/
 [Tue Jul 11 18:32:47.552417 2023] [core:crit] [pid 8:tid 281472938078496] [client 172.26.0.1:34834] AH00025: configuration error:  couldn't check user: /
 [Tue Jul 11 18:32:47.585310 2023] [core:crit] [pid 9:tid 281472963440928] [client 172.26.0.1:34832] AH00025: configuration error:  couldn't check user: /favicon.ico, referer: http://0.0.0.0:8008/
+[Wed Jul 12 11:25:55.993391 2023] [mpm_event:notice] [pid 1:tid 281473876332576] AH00489: Apache/2.4.57 (Unix) configured -- resuming normal operations
+[Wed Jul 12 11:25:55.996523 2023] [core:notice] [pid 1:tid 281473876332576] AH00094: Command line: 'httpd -D FOREGROUND'
+[Wed Jul 12 11:31:02.598266 2023] [mpm_event:notice] [pid 1:tid 281473876332576] AH00492: caught SIGWINCH, shutting down gracefully

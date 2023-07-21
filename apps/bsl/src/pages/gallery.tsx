@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSlide = ({
   id,
@@ -119,7 +120,9 @@ const Gallery = () => {
                 id={1}
                 currentIndex={currentIndex}
                 title="Breast Cancer Awareness months"
-                imageURL={"/assets/img/gallery/image1.png"}
+                imageURL={
+                  "https://res.cloudinary.com/diek2uivi/image/upload/v1689352702/bsl-website/bsl/gallery/image1_ukavqh.png"
+                }
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -127,7 +130,9 @@ const Gallery = () => {
                 id={2}
                 currentIndex={currentIndex}
                 title="Breast Cancer Awareness months"
-                imageURL={"/assets/img/gallery/image2.png"}
+                imageURL={
+                  "https://res.cloudinary.com/diek2uivi/image/upload/v1689352703/bsl-website/bsl/gallery/image2_p9w2pj.png"
+                }
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -135,7 +140,9 @@ const Gallery = () => {
                 id={3}
                 currentIndex={currentIndex}
                 title="Breast Cancer Awareness months"
-                imageURL={"/assets/img/gallery/image3.png"}
+                imageURL={
+                  "https://res.cloudinary.com/diek2uivi/image/upload/v1689352703/bsl-website/bsl/gallery/image3_jwxt3x.png"
+                }
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -143,7 +150,9 @@ const Gallery = () => {
                 id={4}
                 currentIndex={currentIndex}
                 title="Breast Cancer Awareness months"
-                imageURL={"/assets/img/gallery/image1.png"}
+                imageURL={
+                  "https://res.cloudinary.com/diek2uivi/image/upload/v1689352702/bsl-website/bsl/gallery/image1_ukavqh.png"
+                }
               />
             </SwiperSlide>
             <div className=" flex justify-between   absolute top-[50%] bottom-[50%] sm:px-[25%] w-full px-6">
@@ -153,7 +162,7 @@ const Gallery = () => {
                 onClick={() => swiperRef!.current?.slidePrev()}
               >
                 <img
-                  src="/assets/icons/navs/left-blue.svg"
+                  src={prefixAssetPath("/assets/icons/navs/left-blue.svg")}
                   className=" w-full "
                 />
               </button>
@@ -164,7 +173,7 @@ const Gallery = () => {
                 onClick={() => swiperRef!.current?.slideNext()}
               >
                 <img
-                  src="/assets/icons/navs/right-blue.svg"
+                  src={prefixAssetPath("/assets/icons/navs/right-blue.svg")}
                   className="w-full"
                 />
               </button>

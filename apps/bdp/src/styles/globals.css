@@ -25,14 +25,6 @@ body {
     margin: 0;
 }
 
-.home-hero {
-    background-image: url('../../public/assets/img/main-hero1.png');
-    background-size: cover;
-    background-position: center;
-    /* @apply bg-blend-screen;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
-}
 
 .mission-section {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4941), rgba(0, 0, 0, 0.4941)), url('../../public/assets/img/backgrounds/mission/mission.png');

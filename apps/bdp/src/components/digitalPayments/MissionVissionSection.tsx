@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleSlider = ({
   title,
@@ -42,21 +43,21 @@ const MissionVissionSection = () => {
     <section className=" border-red-800 h-[36rem] bg-white text-black relative">
       <div className="absolute left-0 top-0 ">
         <img
-          src="/assets/img/bdp/mission/left1.png"
+          src={prefixAssetPath("/assets/img/bdp/mission/left1.png")}
           className="h-full -ml-4 md:hidden"
         />
         <img
-          src="/assets/img/bdp/mission/left2.png"
+          src={prefixAssetPath("/assets/img/bdp/mission/left2.png")}
           className="h-full -ml-3 hidden md:block"
         />
       </div>
       <div className="absolute right-0 top-0 z-[5px]">
         <img
-          src="/assets/img/bdp/mission/right1.png"
+          src={prefixAssetPath("/assets/img/bdp/mission/right1.png")}
           className="h-full -mr-4 md:hidden"
         />
         <img
-          src="/assets/img/bdp/mission/right2.png"
+          src={prefixAssetPath("/assets/img/bdp/mission/right2.png")}
           className="h-full  hidden md:block"
         />
       </div>
@@ -100,7 +101,10 @@ const MissionVissionSection = () => {
             ref={swiperNavPrevRef}
             onClick={() => swiperRef!.current?.slidePrev()}
           >
-            <img src="/assets/icons/navs/left-blue.svg" className=" w-full " />
+            <img
+              src={prefixAssetPath("/assets/icons/navs/left-blue.svg")}
+              className=" w-full "
+            />
           </button>
 
           <button
@@ -108,7 +112,10 @@ const MissionVissionSection = () => {
             ref={swiperNavNextRef}
             onClick={() => swiperRef!.current?.slideNext()}
           >
-            <img src="/assets/icons/navs/right-blue.svg" className="w-full" />
+            <img
+              src={prefixAssetPath("/assets/icons/navs/right-blue.svg")}
+              className="w-full"
+            />
           </button>
         </div>
       </div>

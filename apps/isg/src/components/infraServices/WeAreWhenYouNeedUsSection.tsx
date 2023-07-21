@@ -12,7 +12,10 @@ const WeAreWhenYouNeedUsSection = () => {
           </Animate.FadeUp>
         </div>
         <div className="w-full h-full ">
-          <img src="/assets/img/isg/weready.png" alt="we are ready image" />
+          <img
+            src="https://res.cloudinary.com/diek2uivi/image/upload/v1689608157/bsl-website/isg/weareready_uqjvcw.png"
+            alt="we are ready image"
+          />
         </div>
       </div>
     </section>

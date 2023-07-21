@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SingleComponent = ({
   title,
@@ -42,7 +43,9 @@ const SingleComponent = ({
                   {list.map((list, _x) => (
                     <li className="flex items-center gap-1" key={_x}>
                       <img
-                        src="/assets/icons/directions-right.svg"
+                        src={prefixAssetPath(
+                          "/assets/icons/directions-right.svg"
+                        )}
                         alt="get directions"
                         className="w-4"
                       />
@@ -66,7 +69,9 @@ const SingleComponent = ({
                   {list.map((list, _x) => (
                     <li className="flex items-center gap-1" key={_x}>
                       <img
-                        src="/assets/icons/directions-right.svg"
+                        src={prefixAssetPath(
+                          "/assets/icons/directions-right.svg"
+                        )}
                         alt="get directions"
                         className="w-4"
                       />
@@ -97,7 +102,9 @@ const SingleComponent = ({
                 {list.map((list, _x) => (
                   <li className="flex items-center gap-2" key={_x}>
                     <img
-                      src="/assets/icons/directions-right.svg"
+                      src={prefixAssetPath(
+                        "/assets/icons/directions-right.svg"
+                      )}
                       alt="get directions"
                       className="w-4"
                     />

@@ -22,7 +22,7 @@ const CustomLottieLoader = ({ status }: { status: "active" | "inactive" }) => {
 
 const HeroSection = () => {
   return (
-    <section className="  h-[90vh] sm:h-[95vh]  relative  top-0 bg-[url('/assets/img/about/bg.jpeg')] bg-cover bg-center">
+    <section className="  h-[90vh] sm:h-[95vh]  relative  top-0 bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689354809/bsl-website/bsl/about/about-bg.jpg')] bg-cover bg-center">
       {/* <div className="absolute inset-0   bg-video   ">
         <video
           autoPlay

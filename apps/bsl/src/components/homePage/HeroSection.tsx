@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 import { Animate } from "../animations/ScrollAnimator";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const CustomLottieLoader = ({ status }: { status: "active" | "inactive" }) => {
   const defaultLottieOptions = {
@@ -63,7 +64,10 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           playsInline
         >
-          <source src="/assets/videos/homepage.webm" type="video/webm" />
+          <source
+            src="https://res.cloudinary.com/diek2uivi/video/upload/v1689353023/bsl-website/bsl/business/homepage_uonxod.webm"
+            type="video/webm"
+          />
         </video>
       </motion.div>
       <div className="relative  h-full  flex flex-col   justify-end gap-0 sm:gap-20  ">
@@ -140,14 +144,20 @@ const HeroSection = () => {
                 ref={swiperNavPrevRef}
                 onClick={() => swiperRef!.current?.slidePrev()}
               >
-                <img src="/assets/icons/nav-left.svg" className=" w-2/3" />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-left.svg")}
+                  className=" w-2/3"
+                />
               </button>
 
               <button
                 ref={swiperNavNextRef}
                 onClick={() => swiperRef!.current?.slideNext()}
               >
-                <img src="/assets/icons/nav-right.svg" className="w-2/3" />
+                <img
+                  src={prefixAssetPath("/assets/icons/nav-right.svg")}
+                  className="w-2/3"
+                />
               </button>
             </div>
           </div>

@@ -25,7 +25,7 @@ const HeroSection = () => {
     setCurrentTextIndexs(currentTextIndex < 2 ? currentTextIndex + 1 : 0);
   };
   return (
-    <section className=" bg-[url('/assets/img/bdp/mobile.jpg')] sm:bg-[url('/assets/img/bdp/main.jpg')] h-[98vh] sm:h-[85vh] md:h-[95vh] bg-cover  bg-center top-0 relative">
+    <section className=" bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593107/bsl-website/bdp/mobile_rtcwxz.jpg')] sm:bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593107/bsl-website/bdp/main_iqesio.jpg')] h-[98vh] sm:h-[85vh] md:h-[95vh] bg-cover  bg-center top-0 relative">
       <div className="h-full w-full custom-container2 flex flex-col justify-start pt-[5rem] sm:justify-center   ">
         <div className="    mt-[4.8rem] sm:-mt-10 ">
           <div className=" w-full  flex flex-col justify-center items-center sm:items-start  ">

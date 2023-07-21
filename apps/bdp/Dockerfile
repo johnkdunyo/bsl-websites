@@ -57,6 +57,6 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/bdp/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/bdp/.next/static ./apps/bdp/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/bdp/public ./apps/bdp/public
 
-EXPOSE 3001
+EXPOSE 3000
 
 CMD node apps/bdp/server.js

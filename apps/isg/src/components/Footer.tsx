@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Animate } from "./animations/ScrollAnimator";
 import siteMetaData from "@/data/siteMetaData";
+import prefixAssetPath from "@/utils/prefixAssetPath";
 
 const SocialMediaButtons = ({ name, href }: { name: string; href: string }) => {
   return (
@@ -14,7 +15,7 @@ const SocialMediaButtons = ({ name, href }: { name: string; href: string }) => {
       >
         <Link href={href} target="_blank" rel="noreferrer">
           <img
-            src={`/assets/icons/social-media/${name}.svg`}
+            src={prefixAssetPath(`/assets/icons/social-media/${name}.svg`)}
             alt={name}
             className="h-[90%]"
           />
@@ -95,7 +96,10 @@ const Footer = () => {
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
         >
-          <img src="/assets/icons/directions-right.svg" alt="get directions" />
+          <img
+            src={prefixAssetPath("/assets/icons/directions-right.svg")}
+            alt="get directions"
+          />
           <h1 className="uppercase tracking-widest text-lg">
             <Link
               href="https://goo.gl/maps/Gvi18DjW6eczcyaF8?coh=178571&entry=tt"
@@ -207,7 +211,7 @@ const Footer = () => {
                   onHoverEnd={(e) => {}}
                 >
                   <img
-                    src="/assets/icons/directions-right.svg"
+                    src={prefixAssetPath("/assets/icons/directions-right.svg")}
                     alt="get directions"
                   />
                   <h1 className="uppercase tracking-widest text-lg">
