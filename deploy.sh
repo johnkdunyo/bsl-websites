@@ -1,5 +1,4 @@
 #!/bin/bash
-
 NETWORK_NAME="apps_network"
 COMPOSE_FILE="docker-compose.yml"
 ENV_FILE=".env"
@@ -29,8 +28,6 @@ echo "Waiting for few seconds..."
 sleep 2
 
 # Run Docker Compose
-# echo "Running Docker Compose..."
-# docker-compose -f $COMPOSE_FILE up -d
 echo "Running Docker Compose with env file..."
 docker-compose --env-file $ENV_FILE -f $COMPOSE_FILE up -d
 

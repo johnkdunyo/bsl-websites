@@ -1,12 +1,31 @@
 version: "3"
 
 services:
+  apache:
+    container_name: apache
+    build: 
+      context: .
+      dockerfile: "./apache/Dockerfile"
+    ports:
+      - 8008:80
+    volumes:
+      - ./apache/apache-config/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./apache/logs:/var/log/apache2/
+      - ./apache/htdocs:/usr/local/apache2/htdocs
+    depends_on:
+      - bsl
+      - bdp
+      - isg
+      - spectrumfibre
+    networks:
+      - apps_network
+    
+
   bsl:
     container_name: bsl
     build:
       context: .
       dockerfile: ./apps/bsl/Dockerfile
-    restart: always
     ports:
       - 3000:3000
     environment:
@@ -20,7 +39,6 @@ services:
     build:
       context: .
       dockerfile: ./apps/bdp/Dockerfile
-    restart: always
     ports:
       - 3001:3001
     environment:
@@ -34,7 +52,6 @@ services:
     build:
       context: .
       dockerfile: ./apps/isg/Dockerfile
-    restart: always
     ports:
       - 3002:3002
     environment:
@@ -48,7 +65,6 @@ services:
     build:
       context: .
       dockerfile: ./apps/spectrumfibre/Dockerfile
-    restart: always
     ports:
       - 3003:3003
     environment:
@@ -62,4 +78,4 @@ services:
 # with each other, by using their container name as a hostname
 networks:
   apps_network:
-    external: true
+    driver: bridge

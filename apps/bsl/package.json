@@ -8,13 +8,11 @@
     "start": "next start --port 3000",
     "lint": "next lint"
   },
-  "dependencies": {
-    "ui": "*",
-    "shared-components": "*"
-
-
+ "dependencies": {
+    "shared-components": "*",
+    "tsconfig": "*"
   },
   "devDependencies": {
-    "tsconfig": "*"
+    "tailwind-config": "*"
   }
 }

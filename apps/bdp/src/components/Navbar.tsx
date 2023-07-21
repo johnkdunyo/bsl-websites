@@ -28,7 +28,7 @@ const WebSubsidiaryNavs: ISubsidiaryNavs[] = [
   {
     id: 1,
     title: "BSL Home",
-    href: `${baseUrl}:3000`,
+    href: `http://bsl:3000`,
     imgSRC: "/assets/icons/bsl-main.svg",
     imgSRC2: "/assets/icons/bsl-main.svg",
   },

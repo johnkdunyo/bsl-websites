@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "allwebsites",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "build": "dotenv -- turbo run build",
     "dev": "dotenv -- turbo dev",
@@ -8,37 +10,13 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo clean"
   },
-  "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "eslint-config-custom": "*",
-    "prettier": "^2.5.1",
-    "turbo": "latest",
-     "dotenv-cli": "latest",
-
-
-    "@types/gsap": "^3.0.0",
-    "@types/react-lottie": "^1.2.6",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "react-icons": "^4.8.0",
-    "tailwindcss": "^3.3.2"
-  },
-  "name": "allwebsites",
-  "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "dependencies": {
     "dotenv": "^16.3.1",
-
-
     "@lottiefiles/lottie-js": "^0.4.1",
-    "@types/node": "18.15.10",
-    "@types/react": "18.0.29",
-    "@types/react-dom": "18.0.11",
-    "daisyui": "^2.51.5",
-    "eslint": "8.36.0",
     "framer-motion": "^10.12.4",
     "gsap": "^3.11.5",
     "next": "13.2.4",
@@ -50,8 +28,26 @@
     "react-scroll-to-top": "^3.0.0",
     "react-use-measure": "^2.1.1",
     "react-visibility-sensor": "^5.1.1",
+    "react-icons": "^4.8.0",
     "swiper": "^9.2.0",
-    "typescript": "5.0.2",
     "shared-components": "*"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.10",
+    "@types/react": "18.0.29",
+    "@types/react-dom": "18.0.11",
+    "@types/gsap": "^3.0.0",
+    "@types/react-lottie": "^1.2.6",
+    "@turbo/gen": "^1.9.7",
+    "daisyui": "^2.51.5",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "turbo": "latest",
+    "dotenv-cli": "latest",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwind-config": "*",
+    "typescript": "5.0.2",
+    "tsconfig": "*"
   }
 }

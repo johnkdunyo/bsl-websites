@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ui": "*",
-    "shared-components": "*"
+    "shared-components": "*",
+    "tsconfig": "*"
   },
   "devDependencies": {
-    "tsconfig": "*",
-    "eslint-config-custom": "*"
+    "tailwind-config": "*"
   }
 }
